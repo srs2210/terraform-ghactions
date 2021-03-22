@@ -27,7 +27,7 @@ resource "azurerm_resource_group" "rg" {
 #Create virtual network
 resource "azurerm_virtual_network" "vnet" {
   name                = "vnet-webserver-${azurerm_resource_group.rg.location}-001"
-  address_space       = ["10.0.0.0/16"]
+  address_space       = ["10.0.0.0/16", "10.1.0.0/16"]
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
 }
